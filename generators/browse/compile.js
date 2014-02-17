@@ -7,13 +7,13 @@
 String.prototype.expand = function() {
 	return this.toString().replace(/([hrcaspit])/g, function(l){
 		switch (l) {
-			case "h": return "|Title "; break;
-			case "r": return "|Recital "; break;
-			case "c": return "|Chapter "; break;
-			case "s": return "|Section "; break;
-			case "a": return "|Article "; break;
+			case "h": return "|Titel "; break;
+			case "r": return "|Präambel "; break;
+			case "c": return "|Kapitel "; break;
+			case "s": return "|Abschnitt "; break;
+			case "a": return "|Artikel "; break;
 			case "p": return "|Paragraph "; break;
-			case "i": return "|Point "; break;
+			case "i": return "|Punkt "; break;
 			case "t": return "|Text "; break;
 		}
 	}).replace(/^\|/,'').split(/\|/g).join(" – ");
@@ -321,7 +321,7 @@ _list.forEach(function(_item,_num){
 //	var _width = (100/_data.length).toFixed(2);
 	var _color = (((_item.stat.perc.proposals-_item.stat.perc.amendments)*100)+0).toFixed(2);
 	var _opacity = (_item.stat.perc.total*3).toFixed(2);
-	var _label = (_item.type === 'addition') ? '+ New part after '+_item.longtitle : _item.longtitle;
+	var _label = (_item.type === 'addition') ? '+ Neuer Teil nach '+_item.longtitle : _item.longtitle;
 	var _label_am = _item.stat.num.amendments;
 	var _label_pr = _item.stat.num.proposals;
 	var _id = _item.id;
