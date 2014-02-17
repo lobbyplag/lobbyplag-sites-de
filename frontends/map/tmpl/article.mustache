@@ -3,7 +3,7 @@
 		<ul class="nav pull-right clearfix">
 			{{#prev}}
 				<li><a class="dontuppercase" title="Jump to previous article" href="/map/article/{{nr}}">&lt;&lt; {{title}}</a></li> {{/prev}}
-			<li><a class="dontuppercase" title="Jump to article overview" href="/map/articles/">List of Articles</a></li>
+			<li><a class="dontuppercase" title="Jump to article overview" href="/map/articles/">Übersicht</a></li>
 			{{#next}}
 				<li><a class="dontuppercase" title="Jump to next article" href="/map/article/{{nr}}">{{title}} &gt;&gt;</a></li> {{/next}}
 		</ul>
@@ -17,21 +17,21 @@
 			</div>
 			<div class="row">
 				<div class="span12">
-					{{desc_en}}
+					{{desc_de}}
 				</div>
 			</div>
 			<br/>
 
 			<div class="row">
 				<div class="span6 info_box">
-					<h4>Groups</h4>
+					<h4>Fraktionen</h4>
 
 					<div class="mep_bars">
 						{{#group_overview}}{{>partial_group_bar}}{{/group_overview}}
 					</div>
 				</div>
 				<div class="span6 info_box">
-					<h4>European Parliament</h4>
+					<h4>Europaparlament</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -43,7 +43,7 @@
 							</div>
 						</div>
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" href="#" onclick="sendEmails(this)">Send an email to the MEPs</a>
+							<a class="btn btn-primary btn-small" href="#" onclick="sendEmails(this)">E-Mail an diesen MEP schicken</a>
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 					<tr>
 						<td>
 							<div class="border_weaker">
-								<h5 class="background_weaker info_box_head">For less Data Privacy: {{overview.contra}} Amendments</h5>
+								<h5 class="background_weaker info_box_head">Für schwächeren Datenschutz: {{overview.contra}} Anträge</h5>
 								<div>
 									{{#overview_meps}}{{#weaker}}{{>partial_article_mep}}{{/weaker}}{{/overview_meps}}
 								</div>
@@ -63,7 +63,7 @@
 						</td>
 						<td>
 							<div class="border_stronger">
-								<h5 class="background_stronger info_box_head">For more Data Privacy: {{overview.pro}} Amendments</h5>
+								<h5 class="background_stronger info_box_head">Für stärkeren Datenschutz: {{overview.pro}} Anträge</h5>
 
 								<div>
 									{{#overview_meps}}{{#stronger}}{{>partial_article_mep}}{{/stronger}}{{/overview_meps}}
@@ -72,7 +72,7 @@
 						</td>
 						<td>
 							<div class="border_neutral">
-								<h5 class="background_neutral info_box_head">Neutral: {{overview.neutral}} Amendments</h5>
+								<h5 class="background_neutral info_box_head">Neutral: {{overview.neutral}} Anträge</h5>
 
 								<div>
 									{{#overview_meps}}{{#neutral}}{{>partial_article_mep}}{{/neutral}}{{/overview_meps}}
@@ -88,7 +88,7 @@
 			<div class="row">
 				<div class="span12 info_box">
 					{{#prev}}<a title="Jump to previous article" href="/map/article/{{nr}}">&lt;&lt; {{title}}</a> - {{/prev}}
-					<a title="Jump to article overview" href="/map/articles/">List of Articles</a>
+					<a title="Jump to article overview" href="/map/articles/">Übersicht</a>
 					{{#next}} - <a title="Jump to next article" href="/map/article/{{nr}}">{{title}} &gt;&gt;</a>{{/next}}
 				</div>
 			</div>

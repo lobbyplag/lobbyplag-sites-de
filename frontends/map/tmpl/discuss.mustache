@@ -3,7 +3,7 @@
 		{{#classified}}
 			{{#prev}}
 				<li><a class="dontuppercase" title="Jump to previous article" href="/map/discuss/libe/{{nr}}">&lt;&lt; {{title}}</a></li> {{/prev}}
-			<li><a class="dontuppercase" title="Jump to amendments overview" href="/map/amendments/libe/">List of Amendments</a></li>
+			<li><a class="dontuppercase" title="Jump to amendments overview" href="/map/amendments/libe/">Liste der Änderungsvorschläge</a></li>
 			{{#next}}
 				<li><a class="dontuppercase" title="Jump to next article" href="/map/discuss/libe/{{nr}}">{{title}} &gt;&gt;</a></li> {{/next}}
 		{{/classified}}
@@ -14,11 +14,11 @@
 		{{#classified}}
 			<div class="row">
 				<div class="span12">
-					<h3>Amendment LIBE #{{amend.number}}
+					<h3>Änderungsvorschlag LIBE #{{amend.number}}
 						{{#enableReport}}
 							<a href="javascript:reportError('{{vote}}','{{amend.number}}');"
 							   class="pull-right btn btn-small alert-error"
-							   title="Report this Rating">Report Error</a>
+							   title="Report this Rating">Fehler melden</a>
 						{{/enableReport}}</h3>
 					<h4>{{amend.directive}}</h4>
 
@@ -27,11 +27,11 @@
 					</div>
 
 					<br/>
-					<span>Current Data Privacy Rating is : <span class="text_{{vote}}">{{vote}}</span></span>
+					<span>Derzeitige Datenschutzbewertung: <span class="text_{{vote}}">{{vote}}</span></span>
 					{{#amend}}
 						{{#meps}}
 							<span class="pull-right">
-								&nbsp&nbsp
+								&nbsp;&nbsp;
 								<a class="mep_name_link" href="/map/meps/{{id}}">{{name}}</a>
 								<a href="/map/countries/{{country_obj.id}}"><img title="{{country_obj.name}}" alt="{{country_obj.name}}" src="/assets/img/flags/20x15/{{country_obj.iso}}.png"/></a>
 								<a href="/map/groups/{{group_obj.id}}"><span class="label label-info label-group-{{group_obj.id}}" title="{{group_obj.long}} - {{constituency_obj.long}}">{{group_obj.short}}</span></a>

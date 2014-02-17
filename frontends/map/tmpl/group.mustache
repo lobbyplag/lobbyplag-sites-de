@@ -9,7 +9,7 @@
 	<nav id="subnav_map_small" class="lp-countries lp-subnav navbar navbar-inverse clearfix">
 		<ul class="nav pull-right clearfix">
 			<li{{^country}} class="active" {{/country}}>
-				<a href="/map/groups/{{group.id}}" title="Show all countries">All</a>
+				<a href="/map/groups/{{group.id}}" title="Show all countries">Alle</a>
 			</li>
 			<li class="space"></li>
 			{{#countries}}
@@ -25,14 +25,14 @@
 		{{^countrygroup}}{{#group}}
 			<div class="row">
 				<div class="span6 info_box">
-					<h4>{{short}} in Europe</h4>
+					<h4>{{short}} in Europa</h4>
 
 					<div class="mep_map">
 						{{#overview_countries}}{{>partial_map}}{{/overview_countries}}
 					</div>
 				</div>
 				<div class="span6 info_box">
-					<h4>Overview {{short}} in Europe</h4>
+					<h4>Übersicht {{short}} in Europa</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -44,7 +44,7 @@
 							</div>
 						</div>
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" lobbyplag-data="{{maildata}}" href="#" onclick="sendEmails(this)">Send an email to the MEPs of <span title="{{long}}">{{short}}</span></a>
+							<a class="btn btn-primary btn-small" lobbyplag-data="{{maildata}}" href="#" onclick="sendEmails(this)">E-Mail an die Abgeordneten von <span title="{{long}}">{{short}}</span> senden</a>
 						</div>
 					</div>
 				</div>
@@ -52,22 +52,21 @@
 			<div class="row">
 				<div class="span12">
 					<section class="info">
-						Here you can see what the members of the {{short}} group have proposed. Choose a country to see what the MEPs of the {{short}} group for a certain country have proposed.
-						You can also choose another political group, or send an email to all members of the {{short}} group.
+						Hier siehst Du, was die Mitlgieder von {{short}} vorgeschlagen haben. Wähle ein Land um zu sehen, was die Abgeordneten von {{short}} dieses Landes vorgeschlagen haben. Du kannst ebenso eine andere Fraktion wählen oder eine E-Mail an alle Mitglieder der Fraktion {{short}} senden.
 					</section>
 				</div>
 			</div>
 			<div class="row">
 				{{#flops.length}}
 					<div class="span6 {{^tops.length}}spanpadding3 {{/tops.length}}info_box border_weaker">
-						<h4 class="background_weaker info_box_head">Top {{flops.length}} for less Data Privacy by {{short}}</h4>
+						<h4 class="background_weaker info_box_head">Top {{flops.length}} für weniger Privatsphäre von {{short}}</h4>
 
 						<div class="flop_box">{{#flops}}{{>partial_mep_line}}{{/flops}}</div>
 					</div>
 				{{/flops.length}}
 				{{#tops.length}}
 					<div class="span6 {{^flops.length}}spanpadding3 {{/flops.length}}info_box border_stronger">
-						<h4 class="background_stronger info_box_head">Top {{tops.length}} for more Data Privacy by {{short}}</h4>
+						<h4 class="background_stronger info_box_head">Top {{tops.length}} für mehr Privatsphäre von {{short}}</h4>
 
 						<div class="top_box">{{#tops}}{{>partial_mep_line}}{{/tops}}</div>
 					</div>
@@ -79,7 +78,7 @@
 			<div class="row">
 				<div class="span6 info_box">
 					<div class="overview_bar_box">
-						<h4>Overview Groups in {{country.thename}}</h4>
+						<h4>Übersicht der Gruppen in {{country.thename}}</h4>
 
 						<div class="mep_bars">
 							{{#countrygroup}}{{#local_overviews}}{{>partial_group_bar_local}}{{/local_overviews}}{{/countrygroup}}
@@ -88,7 +87,7 @@
 				</div>
 
 				<div class="span6 info_box">
-					<h4>Overview {{group.short}} in {{country.thename}}{{#localparties}} ({{localparties}}){{/localparties}}</h4>
+					<h4>Übersicht {{group.short}} in {{country.thename}}{{#localparties}} ({{localparties}}){{/localparties}}</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -100,7 +99,7 @@
 							</div>
 						</div>
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" lobbyplag-data="{{maildata}}" href="#" onclick="sendEmails(this)">Send an email to the MEPs of <span title="{{group.long}}">{{group.short}}</span> in {{country.thename}}</a>
+							<a class="btn btn-primary btn-small" lobbyplag-data="{{maildata}}" href="#" onclick="sendEmails(this)">Sende eine E-Mail an die Abgeordneten von <span title="{{group.long}}">{{group.short}}</span> in {{country.thename}}</a>
 						</div>
 					</div>
 				</div>
@@ -109,24 +108,21 @@
 			<div class="row">
 				<div class="span12">
 					<section class="info">
-						Here you can see what the members of the {{group.short}} group from {{country.thename}} have proposed.
-						You can click on each MEP to see more about their proposals, or you can send them an email by clicking on the email button.
+						Hier siehst Du, welche Vorschläge die Mitglieder von {{group.short}} aus {{country.thename}} eingereicht haben. Klicke auf den Abgeordnete um mehr über dessen Vorschläge zu erfahren. Mit dem E-Mail-Button kannst Du dem Abgeordneten eine E-Mail senden.
 					</section>
 				</div>
 			</div>
 			<div class="row">
 				{{#flops.length}}
 					<div class="span6 {{^tops.length}}spanpadding3 {{/tops.length}}info_box border_weaker">
-						<h4 class="background_weaker info_box_head">Top {{flops.length}} for less Data Privacy
-							by {{group.short}}</h4>
+						<h4 class="background_weaker info_box_head">Top {{flops.length}} für weniger Privatsphäre von {{group.short}}</h4>
 
 						<div class="flop_box">{{#flops}}{{>partial_mep_line}}{{/flops}}</div>
 					</div>
 				{{/flops.length}}
 				{{#tops.length}}
 					<div class="span6 {{^flops.length}}spanpadding3 {{/flops.length}}info_box border_stronger">
-						<h4 class="background_stronger info_box_head">Top {{tops.length}} for more Data Privacy
-							by {{group.short}}</h4>
+						<h4 class="background_stronger info_box_head">Top {{tops.length}} für weniger Privatsphäre von {{group.short}}</h4>
 
 						<div class="top_box">{{#tops}}{{>partial_mep_line}}{{/tops}}</div>
 					</div>

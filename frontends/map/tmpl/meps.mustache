@@ -5,7 +5,7 @@
 				   data-source='{{data.typeahead}}'
 				   autocomplete="off"
 				   data-items="8" data-provide="typeahead" class="span3">
-			<button type="submit" class="btn">Search</button>
+			<button type="submit" class="btn">Suche</button>
 		</form>
 	</div>
 </nav>
@@ -16,9 +16,7 @@
 			<div class="row">
 				<div class="span12">
 					<section class="info">
-						Here you can search for a specific MEP and check out what they have proposed in the committee.
-						In addition you also find the contact details and further information about every MEP.
-						Just type in the name of a MEP in the search box.
+						Hier kannst Du nach bestimmten Abgeordneten suchen uns sehen was diese in den Ausschuss eingebracht haben. Zusätzlich findest Du Kontaktmöglichkeiten und weitere Informationen zu jedem Abgeordneten. Gib einfach den Namen des Abgeordneten in das Suchfeld ein.
 					</section>
 				</div>
 				{{#meps_list}}
@@ -29,15 +27,15 @@
 			</div>
 		{{/meps}}{{/mep}}
 
-		{{#searchterm}}<h2>Nothing found for: {{searchterm}}</h2>{{/searchterm}}
+		{{#searchterm}}<h2>Keine Ergebnisse für: {{searchterm}}</h2>{{/searchterm}}
 
 		{{#meps.length}}
-			<h2>Found {{meps.length}}</h2>
+			<h2>{{meps.length}} gefunden</h2>
 			<table class="table search_result_table">
 				<tr>
 					<th>Name</th>
-					<th>Party</th>
-					<th>Rating</th>
+					<th>Partei</th>
+					<th>Bewertung</th>
 				</tr>
 				{{#meps}}
 					<tr>
@@ -50,9 +48,9 @@
 						</td>
 						<td>
 							{{#votes}}
-								<span class="text_stronger">stronger: {{pro}}</span><br/>
-								<span class="text_weaker">weaker: {{contra}}</span><br/>
-								<span class="text_neutral">neutral: {{neutral}}</span>
+								<span class="text_stronger">Schwächer: {{pro}}</span><br/>
+								<span class="text_weaker">Stärker: {{contra}}</span><br/>
+								<span class="text_neutral">Neutral: {{neutral}}</span>
 							{{/votes}}
 						</td>
 					</tr>
@@ -79,21 +77,21 @@
 							<div class="mep_info_text">
 								<table>
 									<tr>
-										<td>Country:</td>
+										<td>Land:</td>
 										<td>{{country_obj.name}}</td>
 									</tr>
 									<tr>
-										<td>Group:</td>
+										<td>Fraktion:</td>
 										<td>{{group_obj.long}} ({{group_obj.short}})</td>
 									</tr>
 									<tr>
-										<td>Party:</td>
+										<td>Partei:</td>
 										<td>{{constituency_obj.long}} ({{constituency_obj.short}})</td>
 									</tr>
 								</table>
 								<br/>
 								{{#committees}}
-									{{role}} of <span class="committee_name">{{name}}</span><br/>
+									{{role}} von <span class="committee_name">{{name}}</span><br/>
 								{{/committees}}
 							</div>
 						</div>
@@ -104,7 +102,7 @@
 								{{#homepage}}
 									<li><a href="{{homepage}}" title="{{homepage}}">Homepage</a></li>{{/homepage}}
 								{{#europarl}}
-									<li><a href="{{europarl}}" title="{{europarl}}">EU Parliament</a></li>{{/europarl}}
+									<li><a href="{{europarl}}" title="{{europarl}}">EU Parlament</a></li>{{/europarl}}
 								{{#facebook}}
 									<li><a href="{{facebook}}" title="{{facebook}}">Facebook</a></li>{{/facebook}}
 								{{#twitter}}
@@ -114,7 +112,7 @@
 					{{/urls}}
 				</div>
 				<div class="span6 info_box">
-					<h4>Overview {{name}}</h4>
+					<h4>Übersicht {{name}}</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -126,9 +124,9 @@
 							</div>
 						</div>
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" href="mailto:{{email}}">Send an email</a>
+							<a class="btn btn-primary btn-small" href="mailto:{{email}}">Schicke eine E-Mail</a>
 							{{^disable_email}}
-								<a class="btn btn-primary btn-small" href="javascript:sendEmails();">Send an email</a>
+								<a class="btn btn-primary btn-small" href="javascript:sendEmails();">Schicke eine E-Mail</a>
 							{{/disable_email}}
 						</div>
 					</div>
@@ -139,7 +137,7 @@
 				<div class="span12">
 					{{#classified.length}}
 						<div class="accordion amend" id="accordion_amends">
-							<h3>Amendments by {{name}}</h3>
+							<h3>Änderungen von {{name}}</h3>
 							{{#classified}}
 								<div class="accordion-group border_{{vote}}">
 									<div class="accordion-heading background_{{vote}}">
@@ -152,22 +150,22 @@
 										<div class="accordion-inner">
 											<div class="diff">{{&amend.diff}}</div>
 											<div class="tag">
-												&nbsp
+												&nbsp;
 												{{#tagenabled}}
 													{{#tag}}
-														<span>Tag: #{{tag}}</span>
-														<span><a href="#" class="btn btn-small">More Info</a></span>
+														<span>Schlagwort: #{{tag}}</span>
+														<span><a href="#" class="btn btn-small">Weitere Informationen</a></span>
 													{{/tag}}
 												{{/tagenabled}}
-												{{#comment}}<span>Comment: {{comment}}</span>{{/comment}}
+												{{#comment}}<span>Kommentar: {{comment}}</span>{{/comment}}
 												{{#enableReport}}
 													<a href="javascript:reportError('{{vote}}','{{amend.number}}');"
 													   class="pull-right btn btn-small alert-error"
-													   title="Report this Rating">Report Error</a> -
+													   title="Report this Rating">Fehler melden</a> -
 												{{/enableReport}}
 												<a href="/map/discuss/libe/{{amend.number}}"
 												   class="pull-right btn btn-small alert-info"
-												   title="Discuss this Rating">Discuss this Rating</a>
+												   title="Discuss this Rating">Bewertung diskutieren</a>
 
 											</div>
 										</div>

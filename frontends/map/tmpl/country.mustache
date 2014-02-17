@@ -1,6 +1,6 @@
 <nav id="subnav_map" class="lp-countries lp-subnav navbar navbar-inverse clearfix">
 	<ul class="nav pull-right clearfix">
-		<li{{^country}} class="active" {{/country}}><a href="/map/countries" title="Show all countries">All</a></li>
+		<li{{^country}} class="active" {{/country}}><a href="/map/countries" title="Show all countries">Alle</a></li>
 		<li class="space"></li>
 		{{#menu_countries}}
 			<li{{#active}} class="active" {{/active}}><a href="/map/countries/{{id}}" title="{{name}}">{{id}}</a></li>
@@ -13,14 +13,14 @@
 		{{^country}}{{#data}}{{#europe}}
 			<div class="row">
 				<div class="span6 info_box">
-					<h4>Overview Countries</h4>
+					<h4>Übersicht nach Ländern</h4>
 
 					<div class="mep_map">
 						{{#overview_countries}}{{>partial_map}}{{/overview_countries}}
 					</div>
 				</div>
 				<div class="span6 info_box">
-					<h4>Overview Europe</h4>
+					<h4>Übersicht Europa</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -32,7 +32,7 @@
 							</div>
 						</div>
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" href="#" onclick="sendEmails(this)">Send an email to the MEPs</a>
+							<a class="btn btn-primary btn-small" href="#" onclick="sendEmails(this)">Schicke eine E-Mail an die Abgeordneten</a>
 						</div>
 					</div>
 				</div>
@@ -40,21 +40,21 @@
 			<div class="row">
 				<div class="span12">
 					<section class="info">
-						Here you can see an overview over all EU member states. Choose a country to see which Members of the European Parliament (MEPs) from a country are pushing for more or less data privacy.
+						Hier siehst Du eine Übersicht aller EU-Mitgliedsstaaten. Wähle ein land um zu sehen welche Abgeordneten des Landes für mehr oder weniger Datenschutz wirken.
 					</section>
 				</div>
 			</div>
 			<div class="row">
 				{{#flops.length}}
 					<div class="span6 {{^tops.length}}spanpadding3 {{/tops.length}}info_box border_weaker">
-						<h4 class="background_weaker info_box_head">Top {{flops.length}} for less Data Privacy in Europe</h4>
+						<h4 class="background_weaker info_box_head">Top {{flops.length}} für weniger Privatsphäre in Europa</h4>
 
 						<div class="flop_box">{{#flops}}{{>partial_mep_line}}{{/flops}}</div>
 					</div>
 				{{/flops.length}}
 				{{#tops.length}}
 					<div class="span6 {{^flops.length}}spanpadding3 {{/flops.length}}info_box border_stronger">
-						<h4 class="background_stronger info_box_head">Top {{tops.length}} for more Data Privacy in Europe</h4>
+						<h4 class="background_stronger info_box_head">Top {{tops.length}} für mehr Privatsphäre in Europa</h4>
 
 						<div class="top_box">{{#tops}}{{>partial_mep_line}}{{/tops}}</div>
 					</div>
@@ -66,7 +66,7 @@
 			<div class="row">
 				<div class="span6 info_box">
 					<div class="overview_bar_box">
-						<h4>Overview Groups in {{thename}}</h4>
+						<h4>Übersicht Gruppen in {{thename}}</h4>
 
 						<div class="mep_bars">
 							{{#local_overviews}}{{>partial_group_bar_local}}{{/local_overviews}}
@@ -74,7 +74,7 @@
 					</div>
 				</div>
 				<div class="span6 info_box">
-					<h4>Overview {{name}}</h4>
+					<h4>Übersicht {{name}}</h4>
 
 					<div class="overview overview_height_large">
 						<div class="overview_text_box">
@@ -87,7 +87,7 @@
 						</div>
 
 						<div class="btn_email">
-							<a class="btn btn-primary btn-small" href="#" lobbyplag-data="{{maildata}}" onclick="sendEmails(this)">Send an email to the MEPs in {{thename}}</a>
+							<a class="btn btn-primary btn-small" href="#" lobbyplag-data="{{maildata}}" onclick="sendEmails(this)">Sende eine E-Mail an alle Abgeordneten in {{thename}}</a>
 						</div>
 
 					</div>
@@ -96,22 +96,21 @@
 			<div class="row">
 				<div class="span12">
 					<section class="info">
-						Here you can see the results for {{thename}} and for the political parties from {{thename}}. You can choose a MEP to see what exactly a MEP was proposing, or you can go to another country.
-						If you want to get in contact with the MEPs from {{thename}} you can also click on the email button.
+						Hier siehst Du die Ergebnisse für {{thename}} und für die Parteien aus {{thename}}. Wähle einen Abgeordneten um genau zu sehen, was dieser vorgeschlagen hat oder wähle ein anderes Land. Klicke auf den E-Mail-knopf wenn Du mit den Abgeordneten aus {{thename}} in Kontakt treten möchtest.
 					</section>
 				</div>
 			</div>
 			<div class="row">
 				{{#flops.length}}
 					<div class="span6 {{^tops.length}}spanpadding3 {{/tops.length}}info_box border_weaker">
-						<h4 class="background_weaker info_box_head">Top {{flops.length}} for less Data Privacy in {{thename}}</h4>
+						<h4 class="background_weaker info_box_head">Top {{flops.length}} für weniger Privatsphäre in {{thename}}</h4>
 
 						<div class="flop_box">{{#flops}}{{>partial_mep_line}}{{/flops}}</div>
 					</div>
 				{{/flops.length}}
 				{{#tops.length}}
 					<div class="span6 {{^flops.length}}spanpadding3 {{/flops.length}}info_box border_stronger">
-						<h4 class="background_stronger info_box_head">Top {{tops.length}} for more Data Privacy in {{thename}}</h4>
+						<h4 class="background_stronger info_box_head">Top {{tops.length}} für mehr Privatsphäre in {{thename}}</h4>
 
 						<div class="top_box">{{#tops}}{{>partial_mep_line}}{{/tops}}</div>
 					</div>
