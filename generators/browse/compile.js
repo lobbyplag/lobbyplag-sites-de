@@ -95,14 +95,14 @@ function _tree(_parent, _level, _title) {
 			};
 			
 			switch(_item.type) {
-				case "title": _item.title = "Title"; break;
-				case "recital": _item.title = "Recital "+_item.literal; break;
-				case "chapter": _item.title = "Chapter "+_item.literal; break;
-				case "section": _item.title = "Section "+_item.literal; break;
-				case "article": _item.title = "Article "+_item.literal; break;
+				case "title": _item.title = "Titel"; break;
+				case "recital": _item.title = "Präambel "+_item.literal; break;
+				case "chapter": _item.title = "Kapitel "+_item.literal; break;
+				case "section": _item.title = "Abschnitt "+_item.literal; break;
+				case "article": _item.title = "Artikel "+_item.literal; break;
 				case "paragraph": _item.title = "Paragraph "+_item.literal; break;
-				case "point": _item.title = "Point "+_item.literal; break;
-				case "introduction": _item.title = "Introduction"; break;
+				case "point": _item.title = "Punkt "+_item.literal; break;
+				case "introduction": _item.title = "Einführung"; break;
 				case "subparagraph": _item.title = "Text"; break;
 				default:
 					console.log(_item.type);
@@ -289,9 +289,9 @@ if (argv.d) {
 /* generate list */
 var _list_html = [];
 
-_list_html.push('<h2>Browse through the General Data Protection Regulation</h2>')
-_list_html.push('<p>With this tool you can view every part of the <abbr title="General Data Protection Regulation">GDPR</abbr> in 23 languages and view the particular Committee Amendments an Lobby Proposals for the parts.</p>')
-_list_html.push('<table class="table index-list"><thead><tr><th>Directive Part</th><th>Amendments</th><th>Lobby Proposals</th></tr></thead><tbody>');
+_list_html.push('<h2>Durch die Datenschutz-Grundverordnung stöbern</h2>')
+_list_html.push('<p>Mit diesem Tool kannst Du durch alle Teile der <abbr title="Datenschutz-Grundverordnung (General Data Protection Regulation)">GDPR</abbr> in 23 Sprachen stöbern und dir verschiedene Änderungsanträge, sowie Lobby-Vorschläge ansehen.</p>')
+_list_html.push('<table class="table index-list"><thead><tr><th>Teil der Grundverordnung</th><th>Änderungsanträge</th><th>Lobby-Vorschläge</th></tr></thead><tbody>');
 _list.forEach(function(_item){
 	_list_html.push('<tr>');
 	_list_html.push('<td><a href="/show/'+(_item.id)+'" style="margin-left:'+(_item.level*15)+'px">');
