@@ -23,11 +23,11 @@
 		{{>header}}
 		<nav id="subnav" class="navbar navbar-inverse">
 			<ul class="nav pull-right">
-				<li{{#active_welcome}} class="active"{{/active_welcome}}><a href="/">Welcome</a></li>
-				<li{{#active_sources}} class="active"{{/active_sources}}><a href="/sources">Data Sources</a></li>
+				<li{{#active_welcome}} class="active"{{/active_welcome}}><a href="/">Willkommen</a></li>
+				<li{{#active_sources}} class="active"{{/active_sources}}><a href="/sources">Datenquellen</a></li>
 				<li{{#active_blog}} class="active"{{/active_blog}}><a href="/blog">Blog</a></li>
 				<!-- li{{#active_get_involved}} class="active"{{/active_get_involved}}><a href="/get-involved">Get involved!</a></li -->
-				<li{{#active_support_us}} class="active"{{/active_support_us}}><a href="/support-us">Support us</a></li>
+				<li{{#active_support_us}} class="active"{{/active_support_us}}><a href="/support-us">Unterstütze uns!</a></li>
 			</ul>
 		</nav>
 		<div id="main-container">
@@ -35,22 +35,22 @@
 				{{#welcome}}
 				<section id="sec-welcome">
 					<article>
-						<h1>Transparency for the EU</h1>
+						<h1>Transparenz für die EU</h1>
 						<p class="lead">
-							Currently the European Parliament is about to adopt a new <em>General Data Protection Regulation</em> (<abbr title="General Data Protection Regulation">GDPR</abbr>).
-							Over 3000 amendments were submitted in the comittees involved with the regulation, hundreds of pages in proposals by lobby organisations had their impact on this highly volatile process. 
-							LobbyPlag aims to make this whole process transparent and comprehensible. You can compare the lobbyists requests and the committee members proposals and learn which impact the changes would have on the protection of your data.
+							Derzeit ist das Europarlament dabei, eine neue <em>Datenschutzgrundverordnung</em> (<abbr title="General Data Protection Regulation">GDPR</abbr>) zu beschließen.
+							Mehr als 3000 Änderungsvorschläge wurden in den Ausschüssen, die in den Prozess involviert sind, eingebracht, hunderte Seiten aus Lobby-Papieren haben diesen hochgradig sprunghaften Prozess beeinflusst.
+							Lobbyplag versucht, diesen gesamten Prozess transparent und verständlich zu machen. Du kannst die Anfragen der Lobbyisten und die Änderugnsvorschläge vergleichen und herausfinden, welchen Einfluss die Änderungen auf den Schutz Deiner Daten haben.
 						</p>
 					</article>
 					<div class="row">
 						<div class="span-10">
 							<article>
-								<h2>Where to look?</h2>
+								<h2>Was ansehen?</h2>
 								<ul>
-									<li>Compare committee proposals and lobby demands with <a href="/influence">LobbyPlag influence</a></li>
-									<li>Search in lobby proposals and EU Committee amendments with <a href="/research">LobbyPlag research</a></li>
-									<li>Examine the regulation draft with <a href="/browse">LobbyPlag browse</a></li>
-									<li>Take a look at the lobby papers on <a href="/docs">LobbyPlag docs</a></li>
+									<li>Vergleiche die Vorschläge aus dem Ausschüssen und die Forderugnen der Lobby mit <a href="/influence">LobbyPlag Einfluss</a></li>
+									<li>Durchsuche die Vorschläge der Lobbyisten und aus den Ausschüssen mit der <a href="/research">LobbyPlag Recherche</a></li>
+									<li>Untersuche den Verordnungs-Entwurf mit <a href="/browse">LobbyPlag Stöbern</a></li>
+									<li>Wirf einen Blick auf die Lobbypapiere in <a href="/docs">LobbyPlag Dokumente</a></li>
 								</ul>
 							</article>
 						</div>
@@ -66,76 +66,68 @@
 				{{/welcome}}
 				{{#sources}}
 				<section id="sec-sources">
-					<h2>Sources</h2>
+					<h2>Quellen</h2>
 					<article>
-						<h3>Open Data</h3>
+						<h3>Offene Daten</h3>
 						<p>
-							All Data compiled by LobbyPlag <a href="https://github.com/lobbyplag/lobbyplag-data">is available via Github</a>.
+							Alle von LobbyPlag zusammengestellten Daten <a href="https://github.com/lobbyplag/lobbyplag-data">stehen auf Github bereit</a>.
 						</p>
 					</article>
 					<article>
-						<h3>Original Research</h3>
+						<h3>Ursprüngliche Recherche</h3>
 						<p>
-							The original research on lobby influence in EU Committees was conducted by <a href="http://www.europe-v-facebook.org/" rel="follow">Europe versus Facebook</a>.
+							Die ursprüngliche Recherche zu Lobbyeinflüssen in EU-Ausschüsse wurde durchgeführt von <a href="http://www.europe-v-facebook.org/" rel="follow">Europe versus Facebook</a>.
 						</p>
 					</article>
 					<article>
-						<h3>Lobby proposals</h3>
+						<h3>Lobbypapiere</h3>
 						<p>
-							The lobby papers were provided by
+							Die Lobbypapiere wurden bereitgestellt von
 						</p>
 						<ul>
 							<li><a href="http://www.laquadrature.net/" rel="follow">Le Quadrature du Net</a>: <a href="http://www.laquadrature.net/wiki/Lobbies_on_dataprotection">Lobbies on dataprotection</a></li>
 							<li><a href="https://dataskydd.net/" rel="follow">Dataskyddsförordningen</a>: <a href="https://dataskydd.net/lobbydokument-i-parlamentet-om-dataskydd/">Lobbydokument i parlamentet om dataskydd</a></li>
-							<li>Anonymous donations.</li>
+							<li>Anonyme Spenden.</li>
 						</ul>
-				 		<!--
-				 		<p>
-							Information compiled from these documents is available for <a href="data/2012-0011-cod.lobby.json">Download in <abbr title="JavaScript Object Notation">JSON</abbr> format</a>.
-						</p>
-						-->
 					</article>
 					<article>
-						<h3>Amendments dossier</h3>
+						<h3>Dossier der Änderungsvorschläge</h3>
 						<p>
-							The amendments dossier with changes proposed by committee members was provided by
+							Dossier der in die Ausschüsse eingebrachten Änderungsvorschläge wurde zusammengestell von
 						</p>
 						<ul>
 							<li><a href="http://parltrack.euwiki.org/">Parltrack</a>: <a href="http://parltrack.euwiki.org/dossier/2012/0011%28COD%29">2012/0011(COD) Amendments	Dossier</a></li>
 						</ul>
-						<!--
-						<p>
-							Information compiled from this source is available for <a href="data/2012-0011-cod.amendments.json">Download in <abbr title="JavaScript Object Notation">JSON</abbr> format</a>.
-						</p>
-						-->
 					</article>
 					<article>
-						<h3>Directive</h3>
+						<h3>Direktive</h3>
 						<p>
-							The <abbr title="General Data Protection Regulation">GDPR</abbr> directive was imported from <a href="http://eur-lex.europa.eu/">EUR-Lex</a> with <a href="https://github.com/lobbyplag/eurlex-js">eurlex.js</a>.
+							Die <abbr title="General Data Protection Regulation">GDPR</abbr> Direktive wurde von <a href="http://eur-lex.europa.eu/">EUR-Lex</a> mittels <a href="https://github.com/lobbyplag/eurlex-js">eurlex.js</a> importiert.
 						</p>
 					</article>
 					<article>
-						<h3>Acknowledgement</h3>
+						<h3>Anerkennung</h3>
 						<p>
-							LobbyPlag is made by <a href="http://www.opendatacity.de/">OpenDataCity</a>
+							LobbyPlag wird gemacht von <a href="http://www.opendatacity.de/">OpenDataCity</a>
 						</p>
 						<p>
-							Project Coordination: <strong>Marco Maas</strong> <a class="badge badge-info" href="https://twitter.com/themaastrix">@themaastrix</a>
+							Projektleitung: <strong>Marco Maas</strong> <a class="badge badge-info" href="https://twitter.com/themaastrix">@themaastrix</a>
 						</p>
 						<p>
-							Engine Room: <strong>Sebastian Vollnhals</strong> <a class="badge badge-info" href="https://twitter.com/yetzt">@yetzt</a>
+							Maschinenraum: <strong>Sebastian Vollnhals</strong> <a class="badge badge-info" href="https://twitter.com/yetzt">@yetzt</a>
 						</p>
 						<p>
-							Helping Hands: <strong>Lorenz Matzat</strong> <a class="badge badge-info" href="https://twitter.com/lorz">@lorz</a> and <strong>Martin Virtel</strong> <a class="badge badge-info" href="https://twitter.com/mvtango">@mvtango</a>
+							Helfende Hände: <strong>Lorenz Matzat</strong> <a class="badge badge-info" href="https://twitter.com/lorz">@lorz</a> und <strong>Martin Virtel</strong> <a class="badge badge-info" href="https://twitter.com/mvtango">@mvtango</a>
 						</p>
 						<p>
-							With tons of counsel by <strong>Richard Gutjahr</strong> <a class="badge badge-info" href="https://twitter.com/gutjahr">@gutjahr</a> and <strong>Max Schrems</strong> <a class="badge badge-info" href="https://twitter.com/europevfacebook">@europevfacebook</a>
+							Mit Unmengen von Unterstützung durch <strong>Richard Gutjahr</strong> <a class="badge badge-info" href="https://twitter.com/gutjahr">@gutjahr</a> und <strong>Max Schrems</strong> <a class="badge badge-info" href="https://twitter.com/europevfacebook">@europevfacebook</a>
 						</p>
 					</article>
 					<article>
-						<h3>Why the name LobbyPlag?</h3>
-						<p>The name derives from the German websites <a href="http://de.guttenplag.wikia.com/wiki/GuttenPlag_Wiki">GuttenPlag-Wiki</a> and <a href="http://de.vroniplag.wikia.com/wiki/Home">VroniPlag-Wiki</a> - sites that were created by volunteers who analysed the dissertations of politicians and showed their degree of deception.</p>
+						<h3>Weshalb der Name LobbyPlag?</h3>
+						<p>
+							Der Name spielt an auf die Webseiten <a href="http://de.guttenplag.wikia.com/wiki/GuttenPlag_Wiki">GuttenPlag-Wiki</a> und <a href="http://de.vroniplag.wikia.com/wiki/Home">VroniPlag-Wiki</a> - 
+							Seiten die von Freiwilligen erstellt wurden um die Dissertationen von Politikern zu untersuchen und deren Maß an Betrug aufzuzeigen.
 					</article>
 				</section>
 				{{/sources}}
@@ -147,9 +139,9 @@
 				{{#support_us}}
 				<section id="sec-support-us">
 					<article>
-						<h1>Support us!</h1>
+						<h1>Unterstütze uns!</h1>
 						<p class="lead">
-							LobbyPlag is independent and we need to keep it that way. You can help us with your donation:
+							LobbyPlag ist unabhängig und das soll so bleiben. Du kannst uns mit einer Spende unterstützen:
 						</p>
 						<div class="row">
 							<div class="span4 donation-box">
@@ -167,16 +159,16 @@
 							<div class="span4 donation-box">
 								<h3>PayPal</h3>
 								<p>
-									<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=MJ7QP9LNUDBD4" class="btn btn-mini btn-primary">Donate with PayPal</a>
+									<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=MJ7QP9LNUDBD4" class="btn btn-mini btn-primary">Spenden mit PayPal</a>
 								</p>
 							</div>
 						</div>
 					</article>
 					<article id="hall-of-fame" class="hall-of-fame">
-						<h2>Hall of Fame</h2>
+						<h2>Ruhmenshalle</h2>
 						<p>
-							We received 7929 EUR in donations with <a href="https://krautreporter.de/lobbyplag">our crowdfunding campaign</a>.
-							We say thanks to all our supporters, especially: 
+							Wir erhielten 7929 EUR an Spenden durch <a href="https://krautreporter.de/lobbyplag">unsere Crowdfunding-Kampagne</a>.
+							Wir danken allen unseren Unterstützern, insbesondere:
 						</p>
 						<ul class="clearfix">
 							<li><span class="label label-success">1000 EUR</span> nugg.ad AG</li>
@@ -212,7 +204,7 @@
 							<li><span class="label label-success">50 EUR</span> Udo Gesinger</li>
 							<li><span class="label label-success">50 EUR</span> Zoller</li>
 						</ul>
-						<p><small>If you have donated more than 50 EUR (or 0.5 BTC) and want to appear in our hall of fame, <a href="mailto:hall-of-fame@lobbyplag.eu">drop us a note</a>.</small></p>
+						<p><small>Wenn Du mehr als 50 EUR (oder 0.5 BTC) gespendet hast und in der Ruhmeshalle genannt werden willst, <a href="mailto:hall-of-fame@lobbyplag.eu">sag uns bescheid</a>.</small></p>
 					</article>
 				</section>
 				{{/support_us}}
