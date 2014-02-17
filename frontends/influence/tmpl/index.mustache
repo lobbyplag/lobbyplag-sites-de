@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>LobbyPlag ➔ Influence</title>
+		<title>LobbyPlag ➔ Einfluss</title>
 		<meta charset="utf-8" />
 		<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js" type="text/javascript"></script><![endif]-->
 		<meta property="og:title" content="LobbyPlag: You pass the laws – we have the footprints">
@@ -36,15 +36,15 @@
 				<section>
 					<article>
 						{{#data}}
-						<h1>Comparison</h1>
+						<h1>Vergleich</h1>
 						<div class="display-box">
 							<a href="/browse/show/{{location}}">{{location_title}}</a>
 						</div>
 						<table class="table">
 							<thead>
 								<tr>
-									<th>Lobby Proposal</th>
-									<th>Committee Amendment</th>
+									<th>Lobbyvorschlag</th>
+									<th>Ausschuss Änderungsvorschlag</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -53,9 +53,9 @@
 									<td>
 										<div class="diff-container">
 											<div class="diff-buttons btn-group">
-												<a href="javascript:;" class="btn btn-mini btn-inverse button-old">Regulation Draft</a>
-												<a href="javascript:;" class="btn btn-mini btn-primary button-all">Differences</a>
-												<a href="javascript:;" class="btn btn-mini btn-inverse button-new">Changed Version</a>
+												<a href="javascript:;" class="btn btn-mini btn-inverse button-old">Verodnungsentwurf</a>
+												<a href="javascript:;" class="btn btn-mini btn-primary button-all">Unterschiede</a>
+												<a href="javascript:;" class="btn btn-mini btn-inverse button-new">Geänderte Version</a>
 											</div>
 											<div class="diff">
 												{{{diff}}}
@@ -67,9 +67,9 @@
 									<td>
 										<div class="diff-container">
 											<div class="diff-buttons btn-group">
-												<a href="javascript:;" class="btn btn-mini btn-inverse button-old">Regulation Draft</a>
-												<a href="javascript:;" class="btn btn-mini btn-primary button-all">Differences</a>
-												<a href="javascript:;" class="btn btn-mini btn-inverse button-new">Changed Version</a>
+												<a href="javascript:;" class="btn btn-mini btn-inverse button-old">Verodnungsentwurf</a>
+												<a href="javascript:;" class="btn btn-mini btn-primary button-all">Unterschiede</a>
+												<a href="javascript:;" class="btn btn-mini btn-inverse button-new">Geänderte Version</a>
 											</div>
 											{{#text}}
 											<div class="diff">
@@ -88,8 +88,8 @@
 											{{#lobbyist_data}}
 											<a class="lobbyist" href="{{url}}">{{title}}</a>
 											{{/lobbyist_data}}
-											<a href="{{document_url}}{{filename}}#page={{page}}" class="badge badge-info" title="Download">Source</a>
-											<span class="badge badge-info">Page {{page}}</span>
+											<a href="{{document_url}}{{filename}}#page={{page}}" class="badge badge-info" title="Download">Quelle</a>
+											<span class="badge badge-info">Seite {{page}}</span>
 										</div>
 									</td>
 									{{/document}}
@@ -120,14 +120,14 @@
 				{{#list}}
 				<section>
 					<article>
-						<h2>Comparison of Amendments ans Lobby Proposals</h2>
+						<h2>Vergleich zwischen Änderungsvorschlag und Lobby-Vorschlag</h2>
 						<table class="table">
 							<thead>
 								<tr>
-									<th>Location</th>
-									<th>Amendments</th>
-									<th>Authors</th>
-									<th>Lobby Proposals</th>
+									<th>Stelle</th>
+									<th>Änderungsvorschläge</th>
+									<th>Autoren</th>
+									<th>Lobby-Vorschläge</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -154,10 +154,6 @@
 													{{author_name}}
 													<span class="label label-warning upper" title="{{country_title}}">{{country}}</span>
 													<span class="label label-info" title="{{group_title_long}}">{{group_title}}</span>
-													<!--
-													{{#lqdn}}<a href="{{lqdn}}" class="label label-info"><abbr title="Le Quadrature du Net Political Memory">LQDN</abbr></a>{{/lqdn}}
-													{{#agw}}<a href="{{agw}}" class="label label-info"><abbr title="Abgeordnetenwatch">AGW</abbr></a>{{/agw}}
-													-->
 												</div>
 											{{/author_data}}
 										</td>
@@ -165,13 +161,13 @@
 									{{#proposal}}
 									<td>
 										<div class="display-box">
-											{{lobbyist_title}} <span class="label">Page {{page}}</span>
+											{{lobbyist_title}} <span class="label">Seite {{page}}</span>
 										</div>
 									</td>
 									<td>
 										<div class="btn-group btn-group-vertical">
-											<a href="/browse/show/{{location}}" class="btn btn-small btn-default"><i class="icon-search"></i> Browse</a>
-											<a href="{{baseurl}}/plag/{{plag_uid}}" class="btn btn-small btn-default"><i class="icon-random"></i> Compare</a>
+											<a href="/browse/show/{{location}}" class="btn btn-small btn-default"><i class="icon-search"></i> Anzeigen</a>
+											<a href="{{baseurl}}/plag/{{plag_uid}}" class="btn btn-small btn-default"><i class="icon-random"></i> Vergleichen</a>
 											{{#document}}
 											<a href="{{document_url}}{{filename}}#page={{page}}" style="white-space: nowrap;" class="btn btn-default btn-small" title="Download this Document"><i class="icon-download"></i> Download</a>
 											{{/document}}
