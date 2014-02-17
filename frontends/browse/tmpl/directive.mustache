@@ -1,6 +1,6 @@
 {{#directive}}
 <div class="directive">
-	<h2>{{#addition}}<small>Addition after</small> {{/addition}}{{longtitle}}</h2>
+	<h2>{{#addition}}<small>Hinzufügung nach</small> {{/addition}}{{longtitle}}</h2>
 	<nav class="btn-group nav-buttons">
 		{{#prev}}<a href="/browse/show/{{id}}" class="btn btn-default btn-small"><i class="icon-chevron-left"></i> {{title}}</a>{{/prev}}
 		{{#parent}}<a href="/browse/show/{{id}}" class="btn btn-default btn-small"><i class="icon-chevron-up"></i> {{title}}</a>{{/parent}}
@@ -25,21 +25,21 @@
 			</article>
 		{{/text}}
 		{{^text}}
-			<p><em>This item does not contain text.</em></p>
+			<p><em>Dieser Eintrag enthält keinen Text.</em></p>
 		{{/text}}
 	</section>
 	<div class="row">
 		<div class="span6">
-			<h3>Amendments</h3>
+			<h3>Änderungen</h3>
 			<section class="amendments">
 				{{#amendments}}
 					<article>
-						<h4>{{committee}} Amendment #{{amendment}}</h4>
+						<h4>{{committee}} Änderung #{{amendment}}</h4>
 						<div class="diff-container">
 							<div class="diff-buttons btn-group">
-								<a class="btn btn-mini btn-inverse button-old" href="javascript:;">Regulation Draft</a>
-								<a class="btn btn-mini btn-primary button-all" href="javascript:;">Differences</a>
-								<a class="btn btn-mini btn-inverse button-new" href="javascript:;">Changed Version</a>
+								<a class="btn btn-mini btn-inverse button-old" href="javascript:;">Gesetzentwurf</a>
+								<a class="btn btn-mini btn-primary button-all" href="javascript:;">Unterschiede</a>
+								<a class="btn btn-mini btn-inverse button-new" href="javascript:;">Änderungsversion</a>
 							</div>
 							<div class="diff">
 								{{{diff}}}
@@ -49,21 +49,21 @@
 					</article>
 				{{/amendments}}
 				{{^amendments}}
-					<p>There are no amendments to this part of the directive</p>
+					<p>Keine Änderungen für diesen Teil der Grundverordnung</p>
 				{{/amendments}}
 			</section>
 		</div>
 		<div class="span6">
-			<h3>Lobby Proposals</h3>
+			<h3>Lobby-Vorschläge</h3>
 			<section class="proposals">
 				{{#proposals}}
 					<article>
-						<h4>Proposal by {{lobbyist_title}}</h4>
+						<h4>Vorschlag von {{lobbyist_title}}</h4>
 						<div class="diff-container">
 							<div class="diff-buttons btn-group">
-								<a class="btn btn-mini btn-inverse button-old" href="javascript:;">Regulation Draft</a>
-								<a class="btn btn-mini btn-primary button-all" href="javascript:;">Differences</a>
-								<a class="btn btn-mini btn-inverse button-new" href="javascript:;">Changed Version</a>
+								<a class="btn btn-mini btn-inverse button-old" href="javascript:;">Gesetzentwurf</a>
+								<a class="btn btn-mini btn-primary button-all" href="javascript:;">Unterschiede</a>
+								<a class="btn btn-mini btn-inverse button-new" href="javascript:;">Änderungsversion</a>
 							</div>
 							<div class="diff">
 								{{{diff}}}
@@ -72,7 +72,7 @@
 					</article>
 				{{/proposals}}
 				{{^proposals}}
-					<p>There are no lobby proposals to this part of the directive</p>
+					<p>Keine Lobby-Vorschläge für diesen Teil der Grundverordnung</p>
 				{{/proposals}}
 			
 			</section>
